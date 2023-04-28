@@ -4,9 +4,10 @@ echo -e "\nGrading System:\n\nA = 90-100\nB = 80-89\nC = 70-79\nD = 60-69\nF = 0
 
 echo -e "\nEnter a value between 0-100 and a letter grade will be determined:"
 
-read value
+read $value
 
 echo -e "\nYou entered: $value"
+
 
 if [ $value -lt 0 ]
 	then
@@ -36,3 +37,4 @@ elif [[ $value -gt 79 && $value -le 89 ]]
 else [[ $value -gt 89 && $value -le 100 ]]
           echo "Your letter grade is A, great job!"
 fi
+

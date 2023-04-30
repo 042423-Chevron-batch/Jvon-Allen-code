@@ -50,11 +50,11 @@ echo -e "\nDo you want to try our Orange Crush soda? We have 3 of them. (yes/no)
 read selection
 
 
-
+#user selects to try Orange soda
 if [ "$selection" == "yes" ]
       then  
 		o_array=(Orange Orange)
- 		echo -e "There are now ${#o_array[@]} orange sodas!"
+ 		echo -e "\nThere are now ${#o_array[@]} orange sodas!"
 
 	if [ $dollar -eq 5 ]		
 		then
@@ -64,7 +64,7 @@ if [ "$selection" == "yes" ]
 		if [ "$again" == "yes" ]
 		then
 		o_array=(Orange)
-		echo -e "There is now ${#o_array[@]} orange soda!"
+		echo -e "\nThere is now ${#o_array[@]} orange soda!"
 		fi
 		
 		echo -e "\nDo you want the last orange soda? (yes/no)"
@@ -76,15 +76,17 @@ if [ "$selection" == "yes" ]
 	fi
 fi
 
+
 if [ "$selection" == "no" ]
 	then
 	echo -e "\nDo you want to try our Grape Crush soda? We have 3 of them. (yes/no)"
 	read selection1
 
+#user selects to try Grape soda
   if [ "$selection1" == "yes" ]
       then
                 g_array=(Grape Grape)
-                echo -e "There are now ${#g_array[@]} grape sodas!"
+                echo -e "\nThere are now ${#g_array[@]} grape sodas! Your change is 4 dollars"
 
         if [ $dollar -eq 5 ]
                 then
@@ -94,7 +96,12 @@ if [ "$selection" == "no" ]
                 if [ "$again1" == "yes" ]
                 then
                 g_array=(Grape)
-                echo -e "There is now ${#g_array[@]} grape soda!"
+                echo -e "\nThere is now ${#g_array[@]} grape soda! Your change is 3 dollars"
+
+		else
+		echo -e "\nYour change is 4 dollars"
+		exit 1
+
                 fi
 
                 echo -e "\nDo you want the last grape soda? (yes/no)"
@@ -102,6 +109,8 @@ if [ "$selection" == "no" ]
                 if [ "$last1" == "yes" ]
                 then
                 echo -e "\nThere are no more grape sodas! Your change is 2 dollars"
+		else
+		echo -e "\nYour change is 3 dollars"
                 fi
         fi
   fi

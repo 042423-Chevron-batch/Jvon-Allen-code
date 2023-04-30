@@ -35,15 +35,24 @@ read dollar
 if [ $dollar -eq 1 ]
 	then 
 		echo -e "\nYou entered 1 dollar"
+		echo -e "\nWhich flavor would you like to try?"
+			read flavor
+		echo -e "\nYou selected: $flavor"
+		echo -e "\nInsert more dollars to buy another drink!"
+
 elif [ $dollar -eq 5 ]
 	then
 		echo -e "\nYou entered 5 dollars"
+		echo -e "\nWhich flavor would you like to try?"
+                        read flavor
+                echo -e "\nYou selected: $flavor"
+                echo -e "\nWould you like to select another drink? ('y') or ('n')"
+                        read another
+	if [ "$another" = "y" ]
+	 then
+		echo -e "\nWhich flavor would you like to try?"
+	fi
+		
 else
 		echo -e "\nYou entered invalid amount" 
 fi
-
-echo -e "\nWhich flavor would you like to try?"
-
-read flavor
-
-echo -e "\nYou selected: $flavor"

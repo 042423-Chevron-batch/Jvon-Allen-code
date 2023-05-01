@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\nWelcome to the Crush Drink Machine Simulator! Here is a list of flavors we have:"
+echo -e "\nWelcome to the Crush Drink Machine Simulator! Here is a list of flavors we have: "
 
 #Orange flavor array
 o_array=(Orange Orange Orange)

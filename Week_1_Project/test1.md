@@ -43,6 +43,7 @@ elif [ $dollar -eq 5 ]
 
 else
                 echo -e "\nYou inserted an invalid amount"
+		exit 1
 fi
 
 #prompts user with drink option
@@ -81,6 +82,11 @@ if [ "$selection" == "yes" ]
 		else
                 echo -e "\nYour change is 3 dollars"
                fi
+        fi
+
+	if [ $dollar -eq 1 ]
+		then
+                echo -e "\nRerun the program to buy another drink"
 	fi
 fi
 
@@ -121,6 +127,10 @@ fi
 		echo -e "\nYour change is 3 dollars"
                fi
         fi
+        if [ $dollar -eq 1 ]
+                then
+                echo -e "\nRerun the program to buy another drink"
+        fi
   fi
 
   if [ "$selection1" == "no" ]
@@ -159,6 +169,11 @@ fi
                 echo -e "\nYour change is 3 dollars"
                fi
         fi
+        if [ $dollar -eq 1 ]
+                then
+                echo -e "\nRerun the program to buy another drink"
+        fi
+
   fi
 
   if [ "$selection2" == "no" ]
@@ -197,6 +212,11 @@ fi
                 echo -e "\nYour change is 3 dollars"
                fi
         fi
+        if [ $dollar -eq 1 ]
+                then
+                echo -e "\nRerun the program to buy another drink"
+        fi
+
   fi
 
   if [ "$selection3" == "no" ]
@@ -235,5 +255,10 @@ fi
                 echo -e "\nYour change is 3 dollars"
                fi
         fi
+        if [ $dollar -eq 1 ]
+                then
+                echo -e "\nRerun the program to buy another drink"
+        fi
+ 
   fi
 

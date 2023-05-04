@@ -52,7 +52,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'jvonsapi'
+          app-name: 'jvons2api'
           slot-name: 'Production'
           publish-profile: ${{ secrets.JVON_ALLEN_AZURE_PUBLISH_PROFILE }}
           package: .

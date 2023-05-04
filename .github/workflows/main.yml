@@ -1,0 +1,16 @@
+name: Starter Pipeline
+
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"] #run when there's a pull request
+  workflow_dispatch: #manually triggers this workflow
+    
+jobs: 
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+    - name: say hello
+      run: echo "Hello, World!"

@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: windows-latest
     env:
-      working_dir: CSharp.md/HelloWorld
+      working_dir: TemplateApi
     steps:
       - uses: actions/checkout@v2
 

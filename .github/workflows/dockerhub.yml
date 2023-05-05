@@ -24,4 +24,4 @@ jobs:
           context: .
           file: ./dockerfile
           push: true
-          tags: ${{ secrets.jvonallen14 }}/my image:latest
+          tags: ${{ secrets.jvonallen14 }}/firstimage:0.14

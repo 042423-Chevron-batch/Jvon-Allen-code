@@ -26,6 +26,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: C:\Users\jvona\Revature\Jvon-Allen-code\CSharp.md\HelloWorld\dockerfile
+          file: /dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/0.14

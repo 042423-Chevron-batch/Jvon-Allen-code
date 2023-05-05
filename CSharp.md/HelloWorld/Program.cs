@@ -1,34 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-// Console.WriteLine("Hello, World!");
-// Console.WriteLine("What is your name?");
-
-// string name = Console.ReadLine();
-
-// Console.WriteLine("Hello " + name + "!");
-
-// Console.WriteLine("Welcome to Hangman, you have 6 lives to guess the correct word!");
-// Console.WriteLine("Take a lucky guess at the word");
-
-// string word = "apron";
-// Console.WriteLine("The word has " + word.Length + " letters");
-// string userGuess = Console.ReadLine();
-
-// // char[] wordArray = userGuess.ToCharArray();
-
-// foreach (char c in word)
-// {
-//     if (c == userGuess[0]){
-//     Console.WriteLine(c);
-
-//     }
-//     else {
-//         Console.WriteLine("_");
-//     }    
-// }
-// Hangman game
+﻿// Hangman game
 
 // Declare the word to match
-string wordToMatch = "cart";
+    string wordToMatch = "cart";
 
 // Convert the word to match to a char array
 char[] wordArray = wordToMatch.ToCharArray();
@@ -92,10 +65,6 @@ while (numTries > 0 && !wordMatched)
         if (foundMatch)
         {
             Console.WriteLine($"The character {inputChar} was found.");
-
-            // Decrement the number of tries
-            numTries--;
-
         }
         else if (!foundMatch)
         {
@@ -124,6 +93,5 @@ while (numTries > 0 && !wordMatched)
         Console.WriteLine("Invalid choice: ");
     }
 }
-Console.WriteLine($"You did not match the word \"{wordToMatch}\".");
 Console.WriteLine("Press any key to exit.");
 Console.ReadKey();

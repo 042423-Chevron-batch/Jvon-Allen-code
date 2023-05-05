@@ -28,4 +28,4 @@ jobs:
           context: .
           file: C:\Users\jvona\Revature\Jvon-Allen-code\CSharp.md\HelloWorld\dockerfile
           push: true
-          tags: ${{ secrets.jvonallen14 }}/firstimage
+          tags: ${{ secrets.jvonallen14 }}/firstimage:0.14

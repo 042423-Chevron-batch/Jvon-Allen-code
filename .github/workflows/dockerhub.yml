@@ -8,8 +8,6 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    env:
-      working_dir: Program.cs
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -18,6 +16,7 @@ jobs:
         with:
           username: ${{ secrets.jvonallen14 }}
           password: ${{ secrets.dckr_pat_9o2pXdOW4Ty7FJcmWn0gMy3J9tw }}
+          
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v2
         with:

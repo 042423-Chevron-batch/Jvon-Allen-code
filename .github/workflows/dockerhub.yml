@@ -1,18 +1,31 @@
-name: Docker Build and Push
+name: ci
 
 on:
   push:
     branches:
-      - main
+      - "main"
 
 jobs:
   build:
     runs-on: windows-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.jvonallen14 }}
           password: ${{ secrets.dckr_pat_9o2pXdOW4Ty7FJcmWn0gMy3J9tw }}
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: C:\Users\jvona\Revature\Jvon-Allen-code\CSharp.md\HelloWorld\dockerfile
+          push: true
+          tags: ${{ secrets.jvonallen14 }}/firstimage

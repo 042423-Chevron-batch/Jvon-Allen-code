@@ -15,12 +15,4 @@ jobs:
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.jvonallen14 }}
-          password: ${{ secrets.dckr_pat_9o2pXdOW4Ty7FJcmWn0gMy3J9tw }}
-          
-      - name: Build and Push Docker Image
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: ./dockerfile
-          push: true
-          tags: ${{ secrets.jvonallen14 }}/firstimage:0.14
+          password: ${{ secrets.dckr_pat_9o2pXdOW4Ty7FJcmWn0gMy3J9tw }

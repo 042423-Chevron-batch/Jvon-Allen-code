@@ -21,8 +21,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+          
+      -
+        name: build docker image
+        run: docker build - < Dockerfile
+        
       - 
-        name: Build docker image
+        name: Build docker image with url
         run: docker build github.com/042423-Chevron-batch/Jvon-Allen-code/blob/main/Dockerfile
       -
         name: Build and push

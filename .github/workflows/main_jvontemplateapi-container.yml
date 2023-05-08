@@ -12,6 +12,8 @@ on:
 jobs:
   build:
     runs-on: 'ubuntu-latest'
+    env:
+      WORKING_DIR: TemplateApi
 
     steps:
     - uses: actions/checkout@v2

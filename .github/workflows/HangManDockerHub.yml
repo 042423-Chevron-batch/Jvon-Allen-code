@@ -1,30 +1,33 @@
-name: MultiStage Push 
-# The main point of Continuous Integration is to ensure that the new code that is about to be merged
-# or the new code that has been pushed Won't Break Your Application
+name: Publish Docker image
 
-# This on clause specifies which event this pipeline/workflow will run
-on: 
-  push: 
-    branches: ["main"] #run whenever there is a push event to main branch
-  pull_request:
-    branches: ["main"] # run whenever there is a pull request to main branch
-  workflow_dispatch: # you can manually trigger this workflow
-  
+on:
+  release:
+    types: [published]
+
 jobs:
-# This is a job that grabs ubuntu VM and runs "echo 'Hello, World!'"
-  build:
+  push_to_registry:
+    name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
-    env:
-      WORKING_DIR: TemplateApi
     steps:
-    - name: say hello
-      run: echo "Hello, World!"
-
-    - name: checkout git repo
-      uses: actions/checkout@v3
+      - name: Check out the repo
+        uses: actions/checkout@v3
       
-    - name: List content
-      run: ls
+      - name: Log in to Docker Hub
+        uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
       
-    - name: build docker image
-      run: docker build -t jvonallen14/templateapi:0.14 
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
+        with:
+          images: jvonallen14/templateapi:latest
+      
+      - name: Build and push Docker image
+        uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

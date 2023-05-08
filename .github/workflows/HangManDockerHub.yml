@@ -25,3 +25,6 @@ jobs:
       
     - name: List content
       run: ls
+      
+    - name: build docker image
+      run: docker build -t jvonallen14/templateapi:0.14 .

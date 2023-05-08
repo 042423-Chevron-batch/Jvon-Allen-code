@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - 
         name: Build docker image
-        run: docker build github.com/042423-Chevron-batch/Jvon-Allen-code
+        run: docker build https://github.com/042423-Chevron-batch/Jvon-Allen-code/blob/main/Dockerfile
       -
         name: Build and push
         uses: docker/build-push-action@v4

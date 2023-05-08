@@ -27,12 +27,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build and push container image to registry
-      uses: docker/build-push-action@v3
-      with:
-        push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_9be5f2b79aca442d846530f41eb1ccc2 }}/jvonallen14/templateapi:${{ github.sha }}
-        file: ./Dockerfile
+    -
+        name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          push: true
+          tags: jvonallen14/templateapi:latest
 
   deploy:
     runs-on: ubuntu-latest

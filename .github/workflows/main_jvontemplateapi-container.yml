@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'jvontemplateapi-container'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2d5d20f0381c49309ee3107c9f22de36 }}
+        publish-profile: ${{ secrets.TEMPLATEAPI_CONTAINER_PUBLISH_PROFILE }}
         images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_9be5f2b79aca442d846530f41eb1ccc2 }}/jvonallen14/templateapi:${{ github.sha }}'

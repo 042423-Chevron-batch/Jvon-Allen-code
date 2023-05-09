@@ -1,0 +1,14 @@
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS Build
+
+WORKDIR /app
+
+COPY . /app/
+
+RUN dotnet publish -c Release -o dist
+
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS Run
+
+WORKDIR /app
+COPY --from=Build /app/dist/ .
+
+CMD ["dotnet", "TemplateApi.dll"]

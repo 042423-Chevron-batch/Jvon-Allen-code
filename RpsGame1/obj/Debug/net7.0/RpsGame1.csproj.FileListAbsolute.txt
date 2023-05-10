@@ -1,0 +1,15 @@
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\bin\Debug\net7.0\RpsGame1.exe
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\bin\Debug\net7.0\RpsGame1.deps.json
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\bin\Debug\net7.0\RpsGame1.runtimeconfig.json
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\bin\Debug\net7.0\RpsGame1.dll
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\bin\Debug\net7.0\RpsGame1.pdb
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\obj\Debug\net7.0\RpsGame1.csproj.AssemblyReference.cache
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\obj\Debug\net7.0\RpsGame1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\obj\Debug\net7.0\RpsGame1.AssemblyInfoInputs.cache
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\obj\Debug\net7.0\RpsGame1.AssemblyInfo.cs
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\obj\Debug\net7.0\RpsGame1.csproj.CoreCompileInputs.cache
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\obj\Debug\net7.0\RpsGame1.dll
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\obj\Debug\net7.0\refint\RpsGame1.dll
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\obj\Debug\net7.0\RpsGame1.pdb
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\obj\Debug\net7.0\RpsGame1.genruntimeconfig.cache
+C:\Users\jvona\Revature\Jvon-Allen-code\RpsGame1\obj\Debug\net7.0\ref\RpsGame1.dll
